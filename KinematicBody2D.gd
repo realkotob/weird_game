@@ -44,6 +44,9 @@ func walking_animation():
 	if Input.is_action_pressed("left") and Input.is_action_pressed("up"):
 		$wario.flip_h = true
 		$AnimationPlayer.play("up_right")
+	elif Input.is_action_pressed("left") and Input.is_action_pressed("down"):
+		$wario.flip_h = false
+		$AnimationPlayer.play("down_left")
 	elif Input.is_action_pressed("right") and Input.is_action_pressed("up"):
 		$wario.flip_h = false
 		$AnimationPlayer.play("up_right")
@@ -54,9 +57,6 @@ func walking_animation():
 		$AnimationPlayer.play("up")
 	elif Input.is_action_pressed("right") and Input.is_action_pressed("down"):
 		$wario.flip_h = true
-		$AnimationPlayer.play("down_left")
-	elif Input.is_action_pressed("left") and Input.is_action_pressed("down"):
-		$wario.flip_h = false
 		$AnimationPlayer.play("down_left")
 	elif Input.is_action_pressed("right"):
 		$wario.flip_h = false
